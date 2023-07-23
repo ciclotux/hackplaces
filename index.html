@@ -18,16 +18,10 @@
         embedded
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'>
         
-      <a-entity 
-        gltf-model="url(teste.gltf)" 
-        position="0 40 0" 
-        scale="5 5 5"
-        gps-new-entity-place="latitude: -28.47985; longitude: -48.77335;"
-        animation-mixer
-      ></a-entity>
+      <a-entity gltf-model="url(teste.gltf)"></a-entity>
       
       <a-camera 
-        gps-camera
+        gps-camera="simulateLatitude=-28.47985; simulateLongitude: -48.77335"
         rotation-reader
       ></a-camera>
     </a-scene>
