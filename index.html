@@ -12,13 +12,17 @@
   <script src="places.js"></script>
   <body style='margin: 0; overflow: hidden;'>
     <a-scene
-        cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'
-        raycaster="objects: [gps-entity-place];"
         vr-mode-ui="enabled: false"
         embedded
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'>
         
       <a-entity gltf-model="url(teste.gltf)"></a-entity>
+      <a-text
+        value="Brito Safado"
+        look-at="[gps-camera]"
+        align="center"
+        gps-entity-place="latitude=-28.47985; longitude: -48.77335;"
+      ></a-text>
       
       <a-camera 
         gps-camera="simulateLatitude=-28.47985; simulateLongitude: -48.77335"
