@@ -18,26 +18,6 @@
         });
     };
   </script>
-
-  <script>
-  AFRAME.registerComponent('move', {
-    init: function() {
-      // wait until the model is loaded
-      this.el.addEventListener("model-loaded", evt => {
-        const mixer = new THREE.AnimationMixer(this.el.components['gltf-model'].model);
-        const clips = this.el.components['gltf-model'].model.animations[0];
-        mixer.clipAction(clips).play();
-        // "expose" the animation mixer
-        this.mixer = mixer;
-      })
-    },
-    // on each render loop (actually before each render loop)
-    tick: function(t, dt) {
-      if (!this.mixer) return; // if the mixer exists
-      this.mixer.update(dt / 1000) // update it with the delta time
-    }
-  })
-  </script>
   
   <style>
     .buttons {
@@ -93,11 +73,11 @@
         gltf-model="url(https://cdn.glitch.global/9fa7abb8-6261-4e68-b892-de0bd88e9654/brito.glb?v=1690572157082)"
         look-at="[gps-camera]"
         scale="1.5 1.5 1.5"
-        move
+        animation-mixer
         gps-entity-place="latitude: -28.47985; longitude: -48.77335;"
       ></a-entity>
       
-      <a-camera gps-camera rotation-reader> </a-camera>
+      <a-camera gps-camera rotation-reader position="0 0 0"> </a-camera>
     </a-scene>
   </body>
 </html>
