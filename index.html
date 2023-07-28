@@ -36,10 +36,10 @@
       padding: 0.25em;
       border-radius: 4px;
       border: none;
-      background: white;
-      color: black;
-      width: 8em;
-      height: 4em;
+      background: black;
+      color: white;
+      width: 10em;
+      height: 6em;
     }
   </style>
     
@@ -48,7 +48,7 @@
   <body>
 
     <div class="buttons">
-      <button class="info-button">Saiba mais</button>
+      <button class="info-button">Nem tão herói assim  SAIBA MAIS</button>
     </div>
     
     <a-scene
@@ -59,18 +59,12 @@
         gltf-model="https://cdn.glitch.me/9fa7abb8-6261-4e68-b892-de0bd88e9654/1anim.gltf?v=1690581942464"
         look-at="[gps-camera]"
         scale="1.5 1.5 1.5"
+        position="0 0 0"
         animation-mixer
         gps-entity-place="latitude: -28.47985; longitude: -48.77335;"
       ></a-entity>
       
-        <a-text
-        value="Não era tão herói asssim..."
-        scale="100 100 100"
-        position="0 1 0"
-        ></a-text>
-      
-      <a-entity bmfont-text="text: HELLO!; color: #333" position="0 0 -5"></a-entity>
-      
+     
       <a-camera gps-camera rotation-reader position="0 0 0"> </a-camera>
     </a-scene>
   </body>
