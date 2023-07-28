@@ -23,11 +23,16 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 7em;
+      height: 5em;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 10;
+    }
+    
+    b.a {
+      text-align-last: center;
+      vertical-align: text-bottom;
     }
 
     .info-button {
@@ -37,13 +42,13 @@
       background: white;
       color: black;
       width: 8em;
-      height: 5em;
+      height: 4em;
     }
   </style>
     
   </head>
 
-  <a-entity text="value: Não era tão heroi assim...;" anchor="center" baseline="bottom"></a-entity>
+  <b class="a">Não era tão herói assim...</b>
   
   <body>
     <div class="buttons">
@@ -54,16 +59,12 @@
       vr-mode-ui="enabled: false"
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
     >
-      <a-text
-        value="Brito Safado"
-        look-at="[gps-camera]"
-        scale="80 80 80"
-      ></a-text>
 
       <a-entity 
         gltf-model="https://cdn.glitch.global/9fa7abb8-6261-4e68-b892-de0bd88e9654/brito.glb?v=1690572157082"
         look-at="[gps-camera]"
-        scale="1.2 1.2 1.2"
+        scale="1.5 1.5 1.5"
+        animation-mixer
         gps-entity-place="latitude: -28.47985; longitude: -48.77335;"
       ></a-entity>
       
